@@ -50,4 +50,9 @@ class User extends Authenticatable
         return $this->belongsToMany(Question::class, 'question_user')
                     ->withPivot('answer', 'created_at');
     }
+
+    public function questionUsers()
+    {
+        return $this->hasMany(QuestionUser::class);
+    }
 }

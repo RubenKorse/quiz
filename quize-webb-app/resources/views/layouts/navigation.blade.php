@@ -13,11 +13,19 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    <x-nav-link href="{{ route('quizzes.index') }}">
+                        Quizes
+                    </x-nav-link>
+
 
                     @auth
                         @if(Auth::user()->is_teacher)
                             <x-nav-link href="{{ route('admin.quiz') }}">
                                 Manage Quiz
+                            </x-nav-link>
+
+                            <x-nav-link href="{{ route('admin.answers') }}">
+                                students
                             </x-nav-link>
                         @endif
                     @endauth

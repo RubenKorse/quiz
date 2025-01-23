@@ -14,7 +14,19 @@ class QuestionUser extends Model
     protected $fillable = [
         'user_id',
         'question_id',
-        'answer',
+        'awnser',
+        'updated_at',
         'created_at',
+        'correct',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function question()
+    {
+        return $this->belongsTo(question::class);
+    }
 }

@@ -28,4 +28,9 @@ class Question extends Model
     {
         return is_null($this->answer_a) && is_null($this->answer_b) && is_null($this->answer_c);
     }
+
+    public function quiz()
+    {
+        return $this->belongsTo(Quiz::class);
+    }
 }
