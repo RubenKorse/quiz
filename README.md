@@ -1,4 +1,4 @@
-# Code Convention for [Your Project Name]
+# Code Convention
 
 This document outlines the coding standards and best practices for the project. By following these conventions, we ensure that the codebase remains clean, consistent, and maintainable.
 
